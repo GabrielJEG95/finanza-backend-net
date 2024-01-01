@@ -28,5 +28,11 @@ namespace finanza_backend_net.Models.dto
             public string Money1 {get;set;}
             public string Symbol {get;set;}
         }
+
+        public class saveMoney
+        {
+            public string Money1 {get;set;}
+            public string Symbol {get;set;}
+        }
     }
 }

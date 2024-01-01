@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Common.Extensions;
 using Common.Paginado;
+using Common.Util;
 using finanza_backend_net.Models;
 using finanza_backend_net.Models.dto;
 using static finanza_backend_net.Models.dto.moneyDto;
@@ -13,6 +14,7 @@ namespace finanza_backend_net.Services
     public interface ImoneyService
     {
         PaginaCollection<listMoney> moneyList(moneyDto param);
+        Task createMoney(saveMoney obj);
     }
 
     public class moneyService:ImoneyService
@@ -35,6 +37,14 @@ namespace finanza_backend_net.Services
             }).Paginar(param.pagina,param.registroPorPagina);
 
             return data;
+        }
+
+        public async Task createMoney(saveMoney obj)
+        {
+            Money money = Mapper<saveMoney, Money>.Map(obj);
+
+            await _context.Money.AddAsync(money);
+            await _context.SaveChangesAsync();
         }
     }
 }
