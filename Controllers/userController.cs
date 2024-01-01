@@ -51,5 +51,20 @@ namespace finanza_backend_net.Controllers
                 return StatusCode(error.statusCode, error);
             }
         }
+
+        [HttpPut("{IdUser:int}")]
+        public async Task<IActionResult> PutUser(int IdUser, [FromBody] UpdateUser obj)
+        {
+            try
+            {
+                await _service.updateUser(IdUser,obj);
+                return Ok(RespuestaModel.ActualizacionExitosa());
+            }
+            catch (System.Exception ex)
+            {
+                var error= RespuestaModel.ProcesarExcepción(ex);
+                return StatusCode(error.statusCode, error);
+            }
+        }
     }
 }

@@ -15,6 +15,10 @@ public partial class User
 
     public bool? Status { get; set; }
 
+    public string? Name { get; set; }
+
+    public string? LastName { get; set; }
+
     public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
 
     public virtual ICollection<UserInformation> UserInformations { get; set; } = new List<UserInformation>();

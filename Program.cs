@@ -38,6 +38,8 @@ builder.Services.AddCors(o => o.AddPolicy("AllowAnyCorsPolicy", builder =>
 }));
 
 builder.Services.AddTransient<IuserService,userService>();
+builder.Services.AddTransient<IuserInformationService,userInformationService>();
+builder.Services.AddTransient<ImoneyService,moneyService>();
 
 var app = builder.Build();
 

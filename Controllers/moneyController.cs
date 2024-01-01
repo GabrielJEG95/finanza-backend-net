@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Common.Exceptions;
+using finanza_backend_net.Models.dto;
+using finanza_backend_net.Services;
+using Microsoft.AspNetCore.Mvc;
+
+namespace finanza_backend_net.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class moneyController : ControllerBase
+    {
+        private readonly ImoneyService _service;
+        public moneyController(ImoneyService service)
+        {
+            this._service = service;
+        }
+
+        [HttpGet]
+        public IActionResult getMoney([FromQuery] moneyDto param)
+        {
+            try
+            {
+                var data = _service.moneyList(param);
+                return Ok(data);
+            }
+            catch (System.Exception ex)
+            {
+                var error= RespuestaModel.ProcesarExcepción(ex);
+                return StatusCode(error.statusCode, error);
+            }
+        }
+    }
+}

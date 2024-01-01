@@ -37,10 +37,10 @@ public partial class ExpenseControlContext : DbContext
 
     public virtual DbSet<UserInformation> UserInformations { get; set; }
 
-    /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=DESKTOP-UVK5HPI;Database=expense_control;Integrated Security=true; trusted_Connection= true");
-    */
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
@@ -220,6 +220,12 @@ public partial class ExpenseControlContext : DbContext
 
             entity.ToTable("users");
 
+            entity.Property(e => e.LastName)
+                .HasMaxLength(20)
+                .IsUnicode(false);
+            entity.Property(e => e.Name)
+                .HasMaxLength(20)
+                .IsUnicode(false);
             entity.Property(e => e.Password)
                 .HasMaxLength(300)
                 .IsUnicode(false);
@@ -243,12 +249,6 @@ public partial class ExpenseControlContext : DbContext
             entity.Property(e => e.BirthDays).HasColumnType("datetime");
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
-                .IsUnicode(false);
-            entity.Property(e => e.LastName)
-                .HasMaxLength(30)
-                .IsUnicode(false);
-            entity.Property(e => e.Name)
-                .HasMaxLength(25)
                 .IsUnicode(false);
 
             entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.UserInformations)
