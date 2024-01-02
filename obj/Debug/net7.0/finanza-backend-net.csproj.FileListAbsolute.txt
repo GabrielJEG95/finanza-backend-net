@@ -77,3 +77,4 @@ C:\Users\Espinoza Genet\OneDrive\Escritorio\finanza-backend-php\finanza-backend-
 C:\Users\Espinoza Genet\OneDrive\Escritorio\finanza-backend-php\finanza-backend-net\obj\Debug\net7.0\finanza-backend-net.pdb
 C:\Users\Espinoza Genet\OneDrive\Escritorio\finanza-backend-php\finanza-backend-net\obj\Debug\net7.0\finanza-backend-net.genruntimeconfig.cache
 C:\Users\Espinoza Genet\OneDrive\Escritorio\finanza-backend-php\finanza-backend-net\obj\Debug\net7.0\ref\finanza-backend-net.dll
+c:\Users\Espinoza Genet\OneDrive\Escritorio\finanza-backend-php\finanza-backend-net\bin\Debug\net7.0\finanza-backend-net.staticwebassets.runtime.json

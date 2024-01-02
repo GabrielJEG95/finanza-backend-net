@@ -9,6 +9,7 @@ namespace finanza_backend_net.Models.dto
     public class countryDto:Paginado
     {
         public int? IdCountry {get;set;}
+        public string? Country {get;set;}
         private string _ordenarPor{get;set;} = null!;
         public countryDto()
         {
@@ -31,8 +32,9 @@ namespace finanza_backend_net.Models.dto
 
         public class saveCoutry
         {
-            public string Country {get;set;}
+            public string Country1 {get;set;}
             public string? Icon {get;set;}
+            public IFormFile Photo {get;set;}
         }
     }
 }
