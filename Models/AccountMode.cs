@@ -12,4 +12,6 @@ public partial class AccountMode
     public DateTime RegistrationDate { get; set; }
 
     public bool? Status { get; set; }
+
+    public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
 }

@@ -21,6 +21,14 @@ public partial class Account
 
     public bool? Status { get; set; }
 
+    public int IdAccountMode { get; set; }
+
+    public int IdAccountType { get; set; }
+
+    public virtual AccountMode IdAccountModeNavigation { get; set; } = null!;
+
+    public virtual AccountType IdAccountTypeNavigation { get; set; } = null!;
+
     public virtual Bank? IdBankNavigation { get; set; }
 
     public virtual Money IdMoneyNavigation { get; set; } = null!;

@@ -10,6 +10,7 @@ namespace finanza_backend_net.Repository
     public class countryRepository
     {
         private readonly ExpenseControlContext _context;
+        
         public countryRepository(ExpenseControlContext context)
         {
             this._context = context;
@@ -30,7 +31,7 @@ namespace finanza_backend_net.Repository
             .Select(s => new listCountry
             {
                 IdCountry = s.IdCountry,
-                Country = s.Country1,
+                Country =s.Country1,
                 Icon = s.Icon
             }).FirstOrDefault();
 

@@ -61,6 +61,16 @@ public partial class ExpenseControlContext : DbContext
                 .IsRequired()
                 .HasDefaultValueSql("((1))");
 
+            entity.HasOne(d => d.IdAccountModeNavigation).WithMany(p => p.Accounts)
+                .HasForeignKey(d => d.IdAccountMode)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Account__IdAccou__6477ECF3");
+
+            entity.HasOne(d => d.IdAccountTypeNavigation).WithMany(p => p.Accounts)
+                .HasForeignKey(d => d.IdAccountType)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Account__IdAccou__656C112C");
+
             entity.HasOne(d => d.IdBankNavigation).WithMany(p => p.Accounts)
                 .HasForeignKey(d => d.IdBank)
                 .HasConstraintName("FK__Account__IdBank__5BE2A6F2");

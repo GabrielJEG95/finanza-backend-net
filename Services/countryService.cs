@@ -57,7 +57,7 @@ namespace finanza_backend_net.Services
             {
                 IdCountry = s.IdCountry,
                 Country = s.Country1,
-                Icon =s.Icon
+                Icon = s.Icon
             }).Paginar(param.pagina, param.registroPorPagina);
 
             return result;
