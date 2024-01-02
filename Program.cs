@@ -43,6 +43,7 @@ builder.Services.AddTransient<ImoneyService,moneyService>();
 builder.Services.AddTransient<IcountryService,countryService>();
 builder.Services.AddTransient<IbankService,bankService>();
 builder.Services.AddTransient<IaccountModeService,accountModeService>();
+builder.Services.AddTransient<IloginService,loginService>();
 
 var app = builder.Build();
 
