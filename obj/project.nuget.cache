@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6CfcyW3lS9rOzkf+Hqsv5KWqVStzUhD4FEVViqEETw35Lj4YLAUbMO7678E6W3JxkB8kjBxzhnFB/etAOjHEPA==",
+  "dgSpecHash": "k4zNnKW2o7T44EiJOHo1XMpGeZAzWlQaDSPMsH5ILbQbHOEtsl0i4+TuOhdUAiFI8Uq3JHShEQlI4coLq6imWQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\finanza-backend-net.csproj",
+  "projectFilePath": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\finanza-backend-net.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Espinoza Genet\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Espinoza Genet\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

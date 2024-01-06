@@ -129,6 +129,13 @@ public partial class ExpenseControlContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Bank");
+            entity.Property(e => e.Color)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("color");
+            entity.Property(e => e.IconPath)
+                .HasMaxLength(200)
+                .IsUnicode(false);
             entity.Property(e => e.RegistrationDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");

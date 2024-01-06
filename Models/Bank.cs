@@ -15,6 +15,10 @@ public partial class Bank
 
     public bool? Status { get; set; }
 
+    public string? IconPath { get; set; }
+
+    public string? Color { get; set; }
+
     public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
 
     public virtual Country? IdCountryNavigation { get; set; }

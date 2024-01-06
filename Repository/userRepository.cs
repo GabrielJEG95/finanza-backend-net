@@ -21,5 +21,12 @@ namespace finanza_backend_net.Repository
 
             return data == null ? null : data;
         }
+
+        public User findUserByUserName(string userName)
+        {
+            var data = _context.Users.FirstOrDefault(f => f.UserName == userName);
+
+            return data == null ? null : data;
+        }
     }
 }

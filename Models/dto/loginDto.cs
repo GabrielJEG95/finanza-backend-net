@@ -19,6 +19,8 @@ namespace finanza_backend_net.Models.dto
 
         public class infoLogin
         {
+            public int IdUser {get;set;}
+            public string fullName {get;set;}
             public string UserName {get;set;}
             public string Token {get;set;}
         }

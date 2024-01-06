@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using finanza_backend_net.Models;
+using finanza_backend_net.Repository;
 using Microsoft.IdentityModel.Tokens;
 using static finanza_backend_net.Models.dto.loginDto;
 
@@ -17,9 +18,11 @@ namespace finanza_backend_net.Services
     public class loginService:IloginService
     {
         private readonly ExpenseControlContext _context;
+        private readonly userRepository _repository;
         public loginService(ExpenseControlContext context)
         {
             this._context = context;
+            this._repository = new userRepository(context);
         }
 
         public infoLogin login(loginUser obj)
@@ -32,10 +35,13 @@ namespace finanza_backend_net.Services
             if(user==null)
                 throw new Exception("El nombre de usuario o la contraseña son incorrectos");
 
+            User user1 = _repository.findUserByUserName(obj.UserName);
             string token = jwtToken(user.UserName);
 
             infoLogin infoLogin = new infoLogin
             {
+                IdUser = user1.IdUser,
+                fullName = $"{user1.Name} {user1.LastName}" ,
                 UserName = obj.UserName,
                 Token = token
             };

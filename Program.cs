@@ -29,7 +29,7 @@ builder.Services.AddDbContext<ExpenseControlContext>(
         o.UseSqlServer(builder.Configuration.GetConnectionString("finanzaLocal"));
     });
 
-builder.Services.AddCors(o => o.AddPolicy("AllowAnyCorsPolicy", builder =>
+builder.Services.AddCors(o => o.AddPolicy("AllowAll"/*"AllowAnyCorsPolicy"*/, builder =>
 {
     builder.AllowAnyOrigin()
     .AllowAnyMethod()
@@ -44,9 +44,10 @@ builder.Services.AddTransient<IcountryService,countryService>();
 builder.Services.AddTransient<IbankService,bankService>();
 builder.Services.AddTransient<IaccountModeService,accountModeService>();
 builder.Services.AddTransient<IloginService,loginService>();
+builder.Services.AddTransient<IaccountService,accountService>();
 
 var app = builder.Build();
-
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
