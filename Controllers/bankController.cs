@@ -36,7 +36,7 @@ namespace finanza_backend_net.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> postBank([FromBody] saveBank obj)
+        public async Task<IActionResult> postBank([FromForm] saveBank obj)
         {
             try
             {

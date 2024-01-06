@@ -9,8 +9,20 @@
       "PackagePath": "staticwebassets\\public\\images\\ab21d579-fb53-45aa-b83c-0f56e732ea07_flag-round-250.png"
     },
     {
+      "Id": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\bac.png",
+      "PackagePath": "staticwebassets\\public\\images\\bac.png"
+    },
+    {
+      "Id": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\banpro.png",
+      "PackagePath": "staticwebassets\\public\\images\\banpro.png"
+    },
+    {
       "Id": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\d17cd41f-2929-43fb-853e-70d4d9bd4b55_1024px-United-states_flag_icon_round.png",
       "PackagePath": "staticwebassets\\public\\images\\d17cd41f-2929-43fb-853e-70d4d9bd4b55_1024px-United-states_flag_icon_round.png"
+    },
+    {
+      "Id": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\ficohsa.png",
+      "PackagePath": "staticwebassets\\public\\images\\ficohsa.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.finanza-backend-net.props",

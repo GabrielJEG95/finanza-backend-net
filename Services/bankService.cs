@@ -22,10 +22,12 @@ namespace finanza_backend_net.Services
     {
         private readonly ExpenseControlContext _context;
         private readonly countryRepository _repository;
-        public bankService(ExpenseControlContext context)
+        private IWebHostEnvironment _hostEnvironment;
+        public bankService(ExpenseControlContext context, IWebHostEnvironment webHostEnvironment)
         {
             this._context = context;
             this._repository = new countryRepository(context);
+            this._hostEnvironment = webHostEnvironment;
         }
 
         public PaginaCollection<listBank> bankList(BankDto param)
@@ -46,12 +48,30 @@ namespace finanza_backend_net.Services
         {
             bool existCountry = _repository.countryExist(obj.IdCountry);
 
+
             if(!existCountry)
                 throw new Exception("El país seleccionado no existe");
 
+
+            obj.IconPath = await pathPhoto(obj.photo);
             Bank bank = Mapper<saveBank,Bank>.Map(obj);
             await _context.Banks.AddAsync(bank);
             await _context.SaveChangesAsync();
+        }
+        private async Task<string> pathPhoto(IFormFile photo)
+        {
+            var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "public", "images");
+
+            var uniqueFileName = Guid.NewGuid().ToString() + "_" + photo.FileName;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await photo.CopyToAsync(stream);
+            }
+
+            string ruta = Path.Combine("public", "images", uniqueFileName);
+            return ruta;
         }
     }
 }

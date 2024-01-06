@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QOXa1yPeZLf55n12h1OUqdGeP3buzUxyppqN56Ew5u8=",
+  "Hash": "U4oWXeEyrQzh/lRqi/Q2MDcIVTsVRCpp34C129I7SrA=",
   "Source": "finanza-backend-net",
   "BasePath": "_content/finanza-backend-net",
   "Mode": "Default",
@@ -51,6 +51,40 @@
       "OriginalItemSpec": "wwwroot\\public\\images\\ab21d579-fb53-45aa-b83c-0f56e732ea07_flag-round-250.png"
     },
     {
+      "Identity": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\bac.png",
+      "SourceId": "finanza-backend-net",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\",
+      "BasePath": "_content/finanza-backend-net",
+      "RelativePath": "public/images/bac.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\public\\images\\bac.png"
+    },
+    {
+      "Identity": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\banpro.png",
+      "SourceId": "finanza-backend-net",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\",
+      "BasePath": "_content/finanza-backend-net",
+      "RelativePath": "public/images/banpro.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\public\\images\\banpro.png"
+    },
+    {
       "Identity": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\d17cd41f-2929-43fb-853e-70d4d9bd4b55_1024px-United-states_flag_icon_round.png",
       "SourceId": "finanza-backend-net",
       "SourceType": "Discovered",
@@ -66,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\public\\images\\d17cd41f-2929-43fb-853e-70d4d9bd4b55_1024px-United-states_flag_icon_round.png"
+    },
+    {
+      "Identity": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\public\\images\\ficohsa.png",
+      "SourceId": "finanza-backend-net",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Espinoza Genet\\OneDrive\\Escritorio\\finanza-backend-php\\finanza-backend-net\\wwwroot\\",
+      "BasePath": "_content/finanza-backend-net",
+      "RelativePath": "public/images/ficohsa.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\public\\images\\ficohsa.png"
     }
   ]
 }

@@ -33,6 +33,9 @@ namespace finanza_backend_net.Models.dto
         {
             public string Bank1 {get;set;}
             public int IdCountry {get;set;}
+            public string Color {get;set;}
+            public string IconPath {get;set;}
+            public IFormFile photo {get;set;}
         }
     }
 }

@@ -47,6 +47,7 @@ builder.Services.AddTransient<IloginService,loginService>();
 builder.Services.AddTransient<IaccountService,accountService>();
 
 var app = builder.Build();
+app.UseRouting();
 app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -57,8 +58,24 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseStaticFiles();
+
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+
+    endpoints.MapGet("images/{filename}",async context =>
+    {
+        var filename = context.Request.RouteValues["filename"] as string;
+        var path = Path.Combine(builder.Environment.ContentRootPath,"wwwroot","images", filename);
+        if (File.Exists(path))
+            await context.Response.SendFileAsync(path);
+        context.Response.StatusCode = 404;
+    });
+});
 
 app.Run();
